@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "grpc-balancer/pb;pb";
+
+service Svc {
+  rpc CreateSvc (CreateSvcRequest) returns (CreateSvcReply);
+  rpc UpdateSvc (UpdateSvcRequest) returns (UpdateSvcReply);
+  rpc DeleteSvc (DeleteSvcRequest) returns (DeleteSvcReply);
+  rpc GetSvc (GetSvcRequest) returns (GetSvcReply);
+  rpc ListSvc (ListSvcRequest) returns (ListSvcReply);
+}
+
+message CreateSvcRequest {}
+message CreateSvcReply {}
+
+message UpdateSvcRequest {}
+message UpdateSvcReply {}
+
+message DeleteSvcRequest {}
+message DeleteSvcReply {}
+
+message GetSvcRequest {}
+message GetSvcReply {
+  string result = 1;
+}
+
+message ListSvcRequest {}
+message ListSvcReply {}
